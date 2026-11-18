@@ -20,7 +20,7 @@ if (!obj || typeof obj !== "object") {
 obj.state = "UPDATE";
 obj.templateVersion = String(Date.now());
 
-obj.Attention = "Chúc mừng bạn! Kích hoạt Locket Gold thành công bởi RealTrueHieu 💛";
+obj.Attention = "Chúc mừng bạn! Kích hoạt Locket Gold thành công bởi BTKhang 💛";
 obj.entries = obj.entries || {};
 obj.entries.cache_ttl_seconds = "0";
 obj.entries.client_cache_ttl_sec = "0";
@@ -5961,7 +5961,7 @@ Object.assign(obj.entries, {
                 ]
         },
         {
-                "section": "🎨 Decorative by RealTrueHieu",
+                "section": "🎨 Decorative by BTKhang",
                 "items": [
                         {
                                 "overlay_id": "caption:bunniesept nah",
@@ -5981,7 +5981,7 @@ Object.assign(obj.entries, {
                                 }
                         },
                         {
-                                "overlay_id": "caption:RealTrueHieu",
+                                "overlay_id": "caption:BTKhang",
                                 "source": "remote",
                                 "caption": {
                                         "background": {
@@ -5992,7 +5992,7 @@ Object.assign(obj.entries, {
                                                 ]
                                         },
                                         "max_lines": 1,
-                                        "text": "💻 RealTrueHieu",
+                                        "text": "💻 BTKhang",
                                         "text_color": "#183153",
                                         "type": "static_content"
                                 }

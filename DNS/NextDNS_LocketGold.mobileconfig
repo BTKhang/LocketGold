@@ -25,6 +25,13 @@
           <string>HTTPS</string>
           <key>ServerURL</key>
           <string>https://apple.dns.nextdns.io/a2dd89</string>
+          <key>ServerAddresses</key>
+          <array>
+            <string>45.90.28.0</string>
+            <string>45.90.30.0</string>
+            <string>2a07:a8c0::</string>
+            <string>2a07:a8c1::</string>
+          </array>
         </dict>
         <key>OnDemandRules</key>
         <array>

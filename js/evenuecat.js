@@ -1,5 +1,5 @@
 // ========= Locket Gold RevenueCat Injector ========= //
-// Maintainer & Credit: RealTrueHieu
+// Maintainer & Credit: BTKhang
 // Original: NightmarketServer / dhungx
 // =================================================== //
 
@@ -20,7 +20,7 @@ obj.subscriber = obj.subscriber || {};
 obj.subscriber.subscriptions = obj.subscriber.subscriptions || {};
 obj.subscriber.entitlements = obj.subscriber.entitlements || {};
 
-obj.Attention = "Chúc mừng bạn! Kích hoạt Locket Gold thành công bởi RealTrueHieu 💛";
+obj.Attention = "Chúc mừng bạn! Kích hoạt Locket Gold thành công bởi BTKhang 💛";
 
 var NMS = {
   auto_resume_date: null,
@@ -52,15 +52,20 @@ var locketGold = {
 };
 
 const match = Object.keys(mapping).find(e => ua.includes(e));
+
 if (match) {
-  let [e, s] = mapping[match];
-  if (s) {
-    locketGold.product_identifier = s;
-    obj.subscriber.subscriptions[s] = NMS;
+  let [e] = mapping[match];
+  if (e) {
+    obj.subscriber.subscriptions[e] = NMS;
+    obj.subscriber.subscriptions["locket_1600_1y"] = NMS;
+    obj.subscriber.entitlements[e] = locketGold;
+    obj.subscriber.entitlements.pro = locketGold;
+    obj.subscriber.entitlements.Gold = locketGold;
   } else {
     obj.subscriber.subscriptions["locket_1600_1y"] = NMS;
+    obj.subscriber.entitlements.pro = locketGold;
+    obj.subscriber.entitlements.Gold = locketGold;
   }
-  obj.subscriber.entitlements[e] = locketGold;
 } else {
   obj.subscriber.subscriptions["locket_1600_1y"] = NMS;
   obj.subscriber.entitlements.pro = locketGold;
@@ -70,9 +75,9 @@ if (match) {
 // Gửi thông báo kích hoạt thành công (Hỗ trợ Shadowrocket, Loon, Surge, Quantumult X)
 try {
   if (typeof $notification !== "undefined") {
-    $notification.post("Locket Gold Active 💛", "Kích hoạt thành công!", "Credit: RealTrueHieu ✨");
+    $notification.post("Locket Gold Active 💛", "Kích hoạt thành công!", "Credit: BTKhang ✨");
   } else if (typeof $notify !== "undefined") {
-    $notify("Locket Gold Active 💛", "Kích hoạt thành công!", "Credit: RealTrueHieu ✨");
+    $notify("Locket Gold Active 💛", "Kích hoạt thành công!", "Credit: BTKhang ✨");
   }
 } catch (e) {}
 
